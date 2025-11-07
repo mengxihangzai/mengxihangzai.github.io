@@ -1,0 +1,195 @@
+.wrapper {
+    margin: 0 0;
+    width: 1400px;
+}
+body {
+    background-color: #f3f5f7;
+}
+.header {
+    height: 100px;
+    background-color: #edf3ff;
+}
+.header .wrapper {
+    /* padding-top: 29px; */
+    display: flex;
+}
+logo区域
+.logo a {
+    display: block;
+    background-repeat: no-repeat;
+    border-radius:0 0 35% 35%;
+    margin: 6px;
+    width: 195px;
+    height: 100px;
+    background-image: url(./联想截图_20251105202355.png);
+    object-fit: cover;
+     font-size: 0;
+     
+}
+/* 在.logo a中添加过渡动画 */
+.logo a {
+  display: block;
+  background-repeat: no-repeat;
+  border-radius:0% 0% 35% 35%;
+  margin: 2px;
+  width: 195px;
+  height: 100px;
+  background-image: url(./联想截图_20251105202355.png);
+  object-fit: cover;
+  font-size: 0;
+  transition: transform 0.4s ease-in-out; /* 添加过渡动画 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 鼠标悬停时logo向下移动 */
+.logo a:hover {
+  transform: translateY(10px); /* 向下移动10像素 */
+   box-shadow: 0 12px 15px rgba(0,0,0,0.2);
+}
+.nav {
+    margin-left: 50px;
+}
+.nav ul {
+    display: flex;
+}
+.nav li {
+    margin-right: 40px;
+}
+.nav li a {
+    display: block;
+    margin-top: 20px;
+    padding: 6px 12px;
+    line-height: 27px;
+    font-size: 24px;
+    transition: all 0.5s;
+}
+.nav li .active {
+    border-bottom: 2px solid #00a4ff;
+}
+.nav li a:hover{
+    border-bottom: 2px solid #00a4ff;
+    transform: scale(110%);
+    
+}
+.search {
+    display: flex;
+    margin-top: 20px;
+    padding-left: 10px;
+    width: 300px;
+    height: 40px;
+    background-color: #eff7ff;
+    border-radius: 20px;
+}
+.search input {
+    flex: 1;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+}
+.search input::placeholder{
+    font-size: 14px;
+    color: #999;
+}
+.search a {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-image: url(./联想截图_20251105234726.png);
+}
+.user a {
+    align-self: center;
+    width: 16px;
+    height: 16px;
+    margin-left: 40px;
+}
+.user img {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    /* text-align: center; */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 50px;
+    transition:all 0.8s
+
+}
+.user img:hover{
+    transform: rotate(360deg)
+}
+.user span {
+    padding-left: 45px;
+    font-size: 16px;
+    color: #666;
+}
+/* banner区域 */
+.banner {
+    position: relative;
+    height: 400px;
+    background-color: #dffff5;
+    overflow: hidden;
+}
+
+.banner .wrapper {
+    margin-left: 170px;
+    height: 400px;
+    background-image: url(./微信图片_20251106110350_26_7.jpg);
+    background-position: 50%;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* 双开门容器 */
+.banner .door-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 10;
+}
+
+/* 左右两扇门 - 使用同一张图片 */
+.banner .son {
+    height: 100%;
+    width: 50%;
+    background-image: url(./downloaded-image.png);
+    background-size: 200% 100%; /* 调整背景尺寸为200%宽度 */
+    background-repeat: no-repeat;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* 左门显示图片的左半部分 */
+.banner .son.left {
+    background-position: left center;
+    transform-origin: left center;
+}
+
+/* 右门显示图片的右半部分 */
+.banner .son.right {
+    background-position: right center;
+    transform-origin: right center;
+}
+
+/* 鼠标悬停时的开门效果 */
+.banner .wrapper:hover .son.left {
+    transform: translateX(-100%);
+}
+
+.banner .wrapper:hover .son.right {
+    transform: translateX(100%);
+}
+
+.banner .left {
+    /* padding: 5px 20px; */
+    /* margin-left: 160px; */
+    /* width: 180px; */
+    /* height: 440px; */
+    /* background-color: rgba(rgb(48, 19, 19 0.5), green, blue, alpha); */
+}
+.banner .left a {
+    /* display: block; */
+    /* height: 46px; */
+    /* line-height: 46px; */
+}
